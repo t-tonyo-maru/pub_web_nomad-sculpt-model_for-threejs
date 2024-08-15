@@ -5,6 +5,8 @@ import { GLTFLoader, type GLTF } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GUI } from 'lil-gui'
 
+const VITE_GITHUB_PAGES_PATH = import.meta.env.VITE_GITHUB_PAGES_PATH || '/'
+
 const WIDTH = 800
 const HEIGHT = 600
 
@@ -51,7 +53,9 @@ scene.add(spotLightHepler)
 
 // 金属テクスチャ
 const textureloader = new THREE.TextureLoader()
-const metalTexture = textureloader.load('/assets/models/metal_texture.jpg')
+const metalTexture = textureloader.load(
+  `${VITE_GITHUB_PAGES_PATH}/assets/models/metal_texture.jpg`
+)
 
 // gltf オブジェクト
 let gltfObject: GLTF
@@ -137,7 +141,7 @@ orbitController.autoRotateSpeed = 1.0
 // gltf ファイルの読み込み
 const gltfLoader = new GLTFLoader()
 
-gltfLoader.load('/assets/models/model.glb', (data) => {
+gltfLoader.load(`${VITE_GITHUB_PAGES_PATH}/assets/models/model.glb`, (data) => {
   gltfObject = data
 
   // scene.children.map() ではなく scene.traverse() とするのが正しい様子

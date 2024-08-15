@@ -4,6 +4,20 @@
 
 This repository is sample of Nomad Sculpt x Thess.js
 
+## Version
+
+| app / library | version  |
+| ------------- | -------- |
+| Nomad Sculpt  | 1.90     |
+| ---           | ---      |
+| Node.js       | >=20     |
+| typescript    | ^5.2.2   |
+| vite          | ^5.2.0   |
+| @types/three  |          |
+| @types/three  | ^0.167.1 |
+| three         | ^0.167.1 |
+| lil-gui       | ^0.19.2  |
+
 ## Links
 
 - Nomad Sculpt

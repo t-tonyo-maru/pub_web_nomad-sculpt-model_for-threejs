@@ -4,6 +4,10 @@
 
 This repository is sample of Nomad Sculpt x Thess.js
 
+### Explanatory article
+
+[Nomad Sculpt から出力した glTF を Three.js で表示するまでのサンプルコード](https://zenn.dev/t_tonyo_maru/articles/3cd09ced9b7848)
+
 ## Version
 
 | app / library | version  |
@@ -13,7 +17,6 @@ This repository is sample of Nomad Sculpt x Thess.js
 | Node.js       | >=20     |
 | typescript    | ^5.2.2   |
 | vite          | ^5.2.0   |
-| @types/three  |          |
 | @types/three  | ^0.167.1 |
 | three         | ^0.167.1 |
 | lil-gui       | ^0.19.2  |

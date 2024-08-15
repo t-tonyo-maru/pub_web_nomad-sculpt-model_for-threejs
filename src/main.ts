@@ -140,7 +140,6 @@ orbitController.autoRotateSpeed = 1.0
 
 // gltf ファイルの読み込み
 const gltfLoader = new GLTFLoader()
-
 gltfLoader.load(`${VITE_GITHUB_PAGES_PATH}/assets/models/model.glb`, (data) => {
   gltfObject = data
 

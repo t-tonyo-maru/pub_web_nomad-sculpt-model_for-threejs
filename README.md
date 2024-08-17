@@ -8,6 +8,14 @@ This repository is sample of Nomad Sculpt x Thess.js
 
 [Nomad Sculpt から出力した glTF を Three.js で表示するまでのサンプルコード](https://zenn.dev/t_tonyo_maru/articles/3cd09ced9b7848)
 
+## Quick start
+
+1. rename `.env.sample` `.env`.
+2. change Node.js version to >=20.
+   - reference: [Version](#Version)
+3. run `npm i`.
+4. run `npm run dev`.
+
 ## Version
 
 | app / library | version  |

@@ -2,7 +2,7 @@ import './reset.css'
 import './index.css'
 import * as THREE from 'three'
 import { GLTFLoader, type GLTF } from 'three/addons/loaders/GLTFLoader.js'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GUI } from 'lil-gui'
 
 const VITE_GITHUB_PAGES_PATH = import.meta.env.VITE_GITHUB_PAGES_PATH || '/'
@@ -39,8 +39,8 @@ directionalLight.position.set(1, 1, 1)
 scene.add(directionalLight)
 
 // 環境光源
-const ambientlight = new THREE.AmbientLight(0xffffff, 1.0)
-scene.add(ambientlight)
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.0)
+scene.add(ambientLight)
 
 // スポットライト
 const spotLight = new THREE.SpotLight(0xffffff, 24, 12, Math.PI / 4, 10, 0.5)
@@ -79,14 +79,14 @@ gui
     directionalLight.visible = value
   })
 gui
-  .addColor({ ambientlightColor: 0xffffff }, 'ambientlightColor')
+  .addColor({ ambientLightColor: 0xffffff }, 'ambientLightColor')
   .onChange((value: string) => {
-    ambientlight.color = new THREE.Color(value)
+    ambientLight.color = new THREE.Color(value)
   })
 gui
   .add({ showAmbientlight: true }, 'showAmbientlight')
   .onChange((value: boolean) => {
-    ambientlight.visible = value
+    ambientLight.visible = value
   })
 gui.addColor({ spotLight: 0xffffff }, 'spotLight').onChange((value: string) => {
   spotLight.color = new THREE.Color(value)

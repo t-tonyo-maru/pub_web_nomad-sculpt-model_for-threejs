@@ -5,7 +5,7 @@ import { GLTFLoader, type GLTF } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GUI } from 'lil-gui'
 
-const VITE_GITHUB_PAGES_PATH = import.meta.env.VITE_GITHUB_PAGES_PATH || '/'
+const VITE_GITHUB_PAGES_PATH = import.meta.env.BASE_URL || '/'
 
 const WIDTH = 800
 const HEIGHT = 600
@@ -84,7 +84,7 @@ gui
     ambientLight.color = new THREE.Color(value)
   })
 gui
-  .add({ showAmbientlight: true }, 'showAmbientlight')
+  .add({ showAmbientLight: true }, 'showAmbientLight')
   .onChange((value: boolean) => {
     ambientLight.visible = value
   })
